@@ -1,0 +1,36 @@
+ body {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            background-color: blanchedalmond;
+            font-size: 14px;
+            height: 320px;
+        }
+
+        main {
+            align-self: auto;
+            border-radius: 10px;
+            background-color: rgb(39, 62, 66);
+        }
+
+        h1,
+        div {
+            text-align: center;
+            color: rgb(228, 225, 222);
+            background-color: rgb(39, 62, 66);
+            font-size: 16px;
+        }
+
+        form {
+  
+            background-color: rgb(202, 218, 221);
+        }
+
+        button {
+            background-color: rgb(228, 225, 222);
+            color: rgb(39, 62, 66);
+            height: 30px;
+            width: 100px;
+            align-self: auto;
+
+        }
