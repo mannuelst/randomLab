@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="" pt-br>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Calculadora Gorjeta</title>
+    <style>
+        body {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            background-color: blanchedalmond;
+            font-size: 14px;
+            height: 320px;
+        }
+
+        main {
+            align-self: auto;
+            border-radius: 10px;
+            background-color: rgb(39, 62, 66);
+        }
+
+        h1,
+        div {
+            text-align: center;
+            color: rgb(228, 225, 222);
+            background-color: rgb(39, 62, 66);
+            font-size: 16px;
+        }
+
+        form {
+  
+            background-color: rgb(202, 218, 221);
+        }
+
+        button {
+            background-color: rgb(228, 225, 222);
+            color: rgb(39, 62, 66);
+            height: 30px;
+            width: 100px;
+            align-self: auto;
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>
+            Calculadora de Gorjeta
+        </h1>
+        <form action="" id="gorjetaForm">
+            <p>
+                <label for="valor">Quanto ficou a conta?</label> <br>
+                <input type="number" name="valor" id="valor">AOA
+            </p>
+            <p>
+                <label for="service">Como foi o serviço?</label>
+                <br>
+                <select name="" id="service">
+                    <option disabled selected> -- Escolha uma opção</option>
+                    <option value="0.3">30% - Incrível</option>
+                    <option value="0.2">20% - Bom</option>
+                    <option value="0.15">15% - Indiferente</option>
+                    <option value="0.1">10% - Ruim</option>
+                    <option value="0.05">5% - Péssimo</option>
+                </select>
+            </p>
+            <p>
+                <label for="qntPessoas">Quantas pessoas vão dividir a conta?</label>
+                <br>
+                <input type="number" name="" id="qntPessoas">pessoa(s)
+            </p>
+            <button type="submit">Calcular</button>
+            
+            
+            <p></p>
+
+
+        </form>
+        <div id="total">
+            Gorjeta total:
+            R$ <span id="tip">0.00</span>
+            <span id="each">cada</span>
+        </div>
+    </main>
+</body>
+<script type="text/javascript" src="index.js"></script>
+</html>
