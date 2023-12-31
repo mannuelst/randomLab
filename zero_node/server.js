@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import { fastify } from "fastify";
-import { DatabaseMemory } from './src/database_memory.js';
+import { DatabaseMemory } from './src/db_memory.js';
 const server = fastify({logger:true});
 
 //let porta= 3333
@@ -9,18 +9,24 @@ const DATABASE_MEMORY = new DatabaseMemory()
 
 /*ROTTAS | */
 
-server.get('/videos', (request, reply)=>{
-    return "All videos"
+server.get('/videos', ()=>{
+   
+   const videos = DATABASE_MEMORY.listar()
+   return videos
 })
-server.post('/video', (request, reply)=>{
-    DATABASE_MEMORY.create({
-        titulo: "Video 01",
-        descricao: "Esse é o video 01",
-        duracao: 180,
+server.post('/videos', (request, reply)=>{
+    const { titulo,descricao, duracao } = request.body
+    DATABASE_MEMORY.criar({
+        titulo,
+        descricao,
+        duracao
     })
+
+
+    return reply.status(201).send()
 })
-server.put('/videos/:id', ()=>{
-    return "delet video"
+server.put('/videos/:id', (request, reply)=>{
+    const video_id = reque
 })
 server.delete('/video/:id', ()=>{
     return "DELETING"
